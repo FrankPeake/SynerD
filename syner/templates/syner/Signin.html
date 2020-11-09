@@ -1,0 +1,106 @@
+{% load static %}
+<html>
+<head>
+<link rel="stylesheet" href="{% static 'syner/Project1StyleSheet.css' %}">
+<meta charset="UTF-8">
+<title>Home</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js
+"></script>
+<script>
+  function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+</script>
+</head>
+
+<body>
+
+
+
+<a href="{% url 'home' %}"><img src="{% static 'syner/Logo.svg' %}" id = "logo" alt="SynerD Logo" width="150" height="150"></a>
+
+  <h1 id = "logotext"><b>synerD</b></h1>
+  <h1 id = "logosubtext"><b>Syndergy of Diaspora</b></h1>
+
+  <button type="button" id = "donate" name="button"><strong>Donate $5</strong></button>
+
+  <p class = "SignInUp"> <a href="{% url 'signin' %}">Sign In    |</a><a href="{% url 'signup' %}">| Sign Up </a>
+  </p>
+
+  <p class = "menu"> <a href="OurWork.html">Our Work |</a><a href="Members.html"> Members |</a>
+    <a href="Resources.html"> Resources |</a><a href="Location.html"> Location |</a>
+    <a href="Contact.html"> Contact</a>
+
+    
+	<br><br><br><br><br>
+	<center>
+		<font face="arial black" size="4">
+		Sign in for Access<br>
+		synerD Account Validation</font><br>
+		<br>
+		<hr size="4" color="blue"/>
+<br><br>
+		<table border="1" width="800" height="300">
+			<tr>
+				<th align="center" colspan="3"> Existing User? Sign in here. </th>
+			</tr>
+			<tr height="150">
+			<!--<td width="20%"><a href="search.html">Search</a></td> -->	
+
+
+				<td widht="60%">
+
+					<form>
+                        <center>
+						<table>
+							<tr>
+								<td>Username</td><td><input type="text" />*</td></tr>
+
+								<tr><td>Password</td><td><input type="text" /></td></tr>
+
+								<tr><td colspan="2" align="center"><input style="font-face :'Comic Sans MS';font-size:larger;height: 30px; width:90px;background-color: blue;color:white;" type="submit" value="Login"/></td>
+							</tr>
+                        </table>
+                         </center>
+					</form>
+
+				</td>
+
+			</tr>
+			<tr>
+				<td align="center" colspan="3" id="output">	<a href="{% url 'signup' %}"><button id="Register" a><strong>Register Here</strong></button></a></td>
+			</tr>
+
+		</table>
+
+		<br><br><br>
+		<hr size="4" color="blue"/>
+	</center>
+
+<footer>
+
+<p>
+<strong>synerD</strong>
+9 Kentworth Cout <br>
+Flemington NJ, 08822 <br>
+(908)324-4432 <br>
+synerDsupport@gmail.com <br>
+</p>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+{% load static %}
+<html>
+<head>
+<link rel="stylesheet" href="{% static 'syner/Project1StyleSheet.css' %}">
+<meta charset="UTF-8">
+<title>Home</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js
+"></script>
+<script>
+  function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+</script>
+</head>
+
+<body>
+
+
+
+  <a href="{% url 'home' %}"><img src="{% static 'syner/Logo.svg' %}" id = "logo" alt="SynerD Logo" width="150" height="150"></a>
+
+  <h1 id = "logotext"><b>synerD</b></h1>
+  <h1 id = "logosubtext"><b>Syndergy of Diaspora</b></h1>
+
+  <button type="button" id = "donate" name="button"><strong>Donate $5</strong></button>
+
+  <p class = "SignInUp"> <a href="{% url 'signin' %}">Sign In    |</a><a href="{% url 'signup' %}">| Sign Up </a>
+  </p>
+
+  <p class = "menu"> <a href="OurWork.html">Our Work |</a><a href="Members.html"> Members |</a>
+    <a href="Resources.html"> Resources |</a><a href="Location.html"> Location |</a>
+    <a href="Contact.html"> Contact</a>
+
+<div class="body">
+
+  <div class="featured">
+    <div class="tab">
+      <button class="tablinks" onclick="openCity(event, 'WhatsNew')"><strong> What's New</strong> </button>
+      <button class="tablinks" onclick="openCity(event, 'Announcements')"><strong>Announcements</strong></button>
+      <button class="tablinks" onclick="openCity(event, 'FeaturedNews')"><strong>Featured News</strong></button>
+    </div>
+    
+    <div id="WhatsNew" class="tabcontent">
+      <h3>New 2020 Goal!</h3>
+      <p>Our goal is to raise $10,000 through grassroots
+        donations by the end of the year!</p>
+    </div>
+    
+    <div id="Announcements" class="tabcontent">
+      <h3>ARC Partnership</h3>
+      <p>We have partnered with the American Red cross in order send relief Isreal/Palestine!.</p>
+    </div>
+    
+    <div id="FeaturedNews" class="tabcontent">
+      <h3>Diaspora Today</h3>
+      <p>How does Diaspora fit into today's climate of social unrest?</p>
+        <h2>What is African Diaspora?</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/9GRlPPKARts" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+    </div>
+    </div>
+<div>
+  <p id="slideTitle">Together We Make The Difference</p>
+  <div style="max-width: 500px;">
+  <img class="Slides" src="{% static 'syner/volunteer.jpg' %}" >
+  <img class="Slides" src="{% static 'syner/Volunteers.jpg' %}">
+  <img class="Slides" src="{% static 'syner/hands.jpg' %}">
+  <img class="Slides" src="{% static 'syner/handsin.jpg' %}">
+</div>
+</div>
+
+<script>
+  
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("Slides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 2000); 
+}
+
+</script>
+
+
+<footer>
+
+<p>
+<strong>synerD</strong>
+9 Kentworth Cout <br>
+Flemington NJ, 08822 <br>
+(908)324-4432 <br>
+synerDsupport@gmail.com <br>
+</p>
+</footer>
+</div>
+</body>
+</html>

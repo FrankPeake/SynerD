@@ -1,0 +1,127 @@
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+.tab button {
+  background-color: rgb(49, 105, 143);
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+.tab button:hover {
+  background-color: #a5e1f3;
+}
+
+.tab button.active {
+  background-color: rgb(170, 204, 248);
+  color: white;
+}
+
+.tabcontent {
+  background-color: white;
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  width: 100%;
+  height: 500px;
+}
+
+
+.Slides {
+  width: 600px;
+  height: 400px;
+  position: relative;
+  left: 680px;
+  top: 15px;
+}
+
+#logotext{
+  font-size: xx-large;
+  position: absolute;
+  top: 25px;
+  left: 160px;
+  color: rgb(49, 105, 143);
+}
+
+#logosubtext {
+  font-size: larger;
+  position: relative;
+  position: absolute;
+  top: 75px;
+  left: 160px;
+  color: rgb(49, 105, 143);
+}
+
+.SignInUp {
+  position: absolute;
+  right: 250px;
+  top: 80px;
+}
+
+#donate {
+  background-color: green;
+  color: white;  
+  position: absolute;
+  top: 30px;
+  right: 300px;
+  width: 100px;
+  height: 50px;
+}
+
+body {
+  background-color: #e4f6f8;
+
+}
+
+.featured {
+  position: relative;
+  top: 50%;
+  width: 100%;
+  height: 550px;
+
+}
+.menu {
+  width: 100%;
+  height: 30px;
+  background-color: rgb(49, 105, 143);
+  color: white;
+  position: sticky;
+}
+
+a{
+  color: black; 
+  font-size: 23px;
+  padding: 5px;
+}
+a:hover {
+  color: darkblue;
+}
+
+#logo {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 25px;
+  top: 10px;
+  padding: 10px;
+}
+
+footer {
+  position: relative;
+  top: 200px;
+}
+
+#slideTitle {
+  position: relative;
+  left: 730px;
+  font-size: 35px;
+  color: #110b33;
+
+}
