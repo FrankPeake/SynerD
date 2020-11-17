@@ -29,8 +29,13 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+REST_FRAMEWORK = { 
+'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly' 
+]
+}
 
 INSTALLED_APPS = [
+    'rest_framework',
     'backend',
     'syner',
     'django.contrib.admin',
@@ -124,3 +129,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+

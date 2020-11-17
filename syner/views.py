@@ -5,10 +5,10 @@ def home(request):
     return render(request, 'syner/home.html')
 
 def signin(request):
-    return render(request, 'syner/signin.html')
+    return render(request, 'syner/Signin.html')
 
 def signup(request):
-    return render(request, 'syner/signup.html')
+    return render(request, 'syner/Signup.html')
 
 def dashboard(request):
     return render (request, 'syner/dashboard.html')
