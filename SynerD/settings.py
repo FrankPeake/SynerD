@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-
+SECRET_KEY = '%(+1%0dqd^r*3id_18=+e$c@r^^4jr!sw1z^1kz7)hff2r8wwb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
@@ -82,11 +82,14 @@ WSGI_APPLICATION = 'SynerD.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'synerD',
+        'NAME': 'synerd',
         'USER': 'frankie',
         'PASSWORD': 'frankie',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
+        'HOST': 'localhost',
+        'PORT':  '3306',
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+        }
     }
 }
 
