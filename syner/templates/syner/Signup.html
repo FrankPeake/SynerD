@@ -80,90 +80,14 @@
 		<br>
 		<hr size="4" color="blue"/>
 <br><br>
-		<table border="1" width="800" height="300">
-			<tr>
+		<table border="1" width="500" height="600">
 				<th align="center" colspan="3"> Create your account using the form below </th>
-			</tr>
-			<tr height="150">
-
-				<td widht="60%">
-
-					<form>
-            <center>
-						<table>
-							<tr>
-
-                <tr><td>Username</td><td><input type="text" pattern=".{8,}" title="8 or more characters"/></td></tr>
-
-                <tr><td>Password</td><td><input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="8 or more characters | one digit | one lowercase | one uppercase"/></td></tr>
-
-                <td>First Name</td><td><input type="text" /></td></tr>
-
-                <td>Middle Name</td><td><input type="text" /></td></tr>
-
-                <td>Last Name</td><td><input type="text" /></td></tr>
-
-                <td>Gender</td><td><input type="text" /><br>                  
-                <input type="radio" name="yes_no" checked>Male</input>
-                </p>
-                <p>
-                <input type="radio" name="yes_no">Female</input>
-                <p>
-                <input type="radio" name="yes_no">Other</input>
-                </p>
-                </p></td></tr></td></tr>
-
-                <td>Street Address</td><td><input type="text" />*</td></tr>
-
-                <td>City</td><td><input type="text" /></td></tr>
-
-                <td>State</td><td><input type="text" /></td></tr>
-
-                <td>Zip Code</td><td><input type="text" /></td></tr>
-
-                <tr><td>Email Address</td><td><input type="email" /></td></tr>
-                
-                <tr><td>Cell Number</td><td><input type="text" /></td></tr>
-                
-                <tr><td>Do you reside in the US? </td><td><p>
-                  <input type="radio" name="yes_no" checked>Yes</input>
-                  </p>
-                  <p>
-                  <input type="radio" name="yes_no">No</input>
-                  </p></td></tr>
-
-                <tr><td>DOB</td><td><input type="datetime" /></td></tr>
-
-                <tr><td>Member Organization</td><td><input type="text" /></td></tr>
-
-
-
-                <tr><td>Provide location for specialized offers:</td></tr>
-                
-                <tr><td><button onclick="myLocation()">Locate</button><p></p></td></tr>
-
-
-              </center>
-
-
-								<tr><td colspan="2" align="center"><input style="font-face :'Comic Sans MS';font-size:larger;height: 30px; width:90px;background-color: blue;color:white;" type="submit" value="Sign Up"/></td>
-							</tr>
-						</table>
+					<form method="POST" action="" >
+              {% csrf_token %}
+              {{form}}
+              <tr><td><input style="font-size:larger;height: 30px; width:90px;background-color: blue;color:white;" type="submit" value="Sign Up"></td></tr>
 					</form>
-
-				</td>
-	
-			</tr>
-			<tr>
-        <td align="center" colspan="3" id="output"></td>
-      
-			</tr>
-
-      <tr>
         <td align="center" colspan="3"><a href="Signin.html"><button id="Login" a><strong>Log In Here</strong></button></a></td>
-
-      </tr>
-
 		</table>
 
 
